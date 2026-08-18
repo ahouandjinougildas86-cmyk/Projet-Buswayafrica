@@ -1,0 +1,118 @@
+{
+  "project_info": {
+    "project_number": "755401705537",
+    "project_id": "busway-africa",
+    "storage_bucket": "busway-africa.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:755401705537:android:9d83371cf37ae4a64a5ec0",
+        "android_client_info": {
+          "package_name": "com.buswayafrica.busway_africa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "755401705537-gdus5rme2tr4eh3ekq74ish6anlabtp6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_82Q8cP3IspXE9EBmaS3EjevPZ2G8TJM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "755401705537-gdus5rme2tr4eh3ekq74ish6anlabtp6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "755401705537-b3d14sjqd8q5d4q8gk8tbltb2oe0uc70.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.buswayafrica.buswayAfrica"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:755401705537:android:883cb1cd730a9af94a5ec0",
+        "android_client_info": {
+          "package_name": "com.example.busway_africa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "755401705537-gdus5rme2tr4eh3ekq74ish6anlabtp6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_82Q8cP3IspXE9EBmaS3EjevPZ2G8TJM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "755401705537-gdus5rme2tr4eh3ekq74ish6anlabtp6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "755401705537-b3d14sjqd8q5d4q8gk8tbltb2oe0uc70.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.buswayafrica.buswayAfrica"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:755401705537:android:05d179d72d17623a4a5ec0",
+        "android_client_info": {
+          "package_name": "com.example.projet_busway_africa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "755401705537-gdus5rme2tr4eh3ekq74ish6anlabtp6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_82Q8cP3IspXE9EBmaS3EjevPZ2G8TJM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "755401705537-gdus5rme2tr4eh3ekq74ish6anlabtp6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "755401705537-b3d14sjqd8q5d4q8gk8tbltb2oe0uc70.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.buswayafrica.buswayAfrica"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

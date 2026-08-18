@@ -33,11 +33,25 @@ class AppRouter {
       GoRoute(
         path: '/booking',
         builder: (context, state) {
-          final extra =
-              state.extra as Map<String, dynamic>;
+          final extra = state.extra;
+
+          // Si l'utilisateur arrive ici sans données (rechargement de page,
+          // lien direct, hot restart en cours sur cette URL...), on le
+          // renvoie vers l'accueil au lieu de planter avec un TypeError.
+          if (extra == null || extra is! Map<String, dynamic>) {
+            return const _BookingRedirect();
+          }
+
+          final trajetId = extra['trajetId'];
+          final data = extra['data'];
+
+          if (trajetId == null || data == null) {
+            return const _BookingRedirect();
+          }
+
           return BookingScreen(
-            trajetId: extra['trajetId'],
-            data: extra['data'],
+            trajetId: trajetId,
+            data: data,
           );
         },
       ),
@@ -51,4 +65,45 @@ class AppRouter {
       ),
     ],
   );
+}
+
+// Écran affiché quand /booking est atteint sans les données nécessaires
+// (rechargement de page, lien direct...). Pas de redirection automatique :
+// ça évite un conflit avec le Navigator pendant une transition en cours.
+class _BookingRedirect extends StatelessWidget {
+  const _BookingRedirect();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(24),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(Icons.error_outline, size: 48, color: Colors.grey[400]),
+              const SizedBox(height: 16),
+              const Text(
+                'Informations de trajet introuvables.',
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(height: 8),
+              Text(
+                'Retourne à l\'accueil et sélectionne à nouveau un trajet.',
+                style: TextStyle(color: Colors.grey[600], fontSize: 13),
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () => context.go('/client'),
+                child: const Text('Retour à l\'accueil'),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
 }
